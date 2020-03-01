@@ -13,4 +13,6 @@ RUN groupadd -r ${RUN_GROUP} && useradd -g ${RUN_GROUP} -d ${CATALINA_HOME} -s /
 RUN chown -R tomcat:tomcat $CATALINA_HOME
 RUN chmod 777 -R $CATALINA_HOME
 
+EXPOSE 9001
+
 CMD ["catalina.sh", "run"]
